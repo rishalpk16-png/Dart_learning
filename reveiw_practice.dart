@@ -1,3 +1,4 @@
+import 'dart:io';
 void main(){
 
 
@@ -12,6 +13,10 @@ void main(){
 // int total = returntype(10,50);
 // print(total);
 switchcase_using_list();
+// input_output();
+// find_largest_number_usingList();
+// simple();
+// username_password_check();
 }
 
 
@@ -197,4 +202,55 @@ switchcase_using_list(){
 
   
 }
+
+input_output(){
+  print("Add 2 Numbers!");
+
+ print("Enter your first number");
+ int number1 = int.parse(stdin.readLineSync()!);
+
+ print("Enter your Second number");
+ int number2 = int.parse(stdin.readLineSync()!);
+
+ 
+
+ print("Adding your number....  $number1  +  $number2 ....");
+ print("\n");
+
+ print("the answer is = ${number1 + number2}");
+}
+
+find_largest_number_usingList(){
+  List<int> numbers = [10,12,7,10,20];
+
+  int largest = 0;
+
+  for(int i=0;i<numbers.length;i++){
+    if(numbers[i] > largest){
+      largest = numbers[i];
+    }
+  }
+  print(numbers);
+  print(largest);
+
+
+}
+
+username_password_check(){
+  print("LOGIN PAGE");
+  print("\n");
+  print("Enter your username");
+  String username = stdin.readLineSync()!;
+  print("Enter your paasword");
+  String password = stdin.readLineSync()!;
+
+
+  if(username == "admin" && password == "1234"){
+    print("loggin Success");
+  }else{
+    print("Invalid credantails");
+  }
+}
+
+
 
